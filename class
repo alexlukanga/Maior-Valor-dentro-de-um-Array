@@ -1,0 +1,18 @@
+	public int[] array_original = new int[] {1, 1, 12, 56, 7, 8, 8, 50, 45};
+	public int[] array_comparar;
+
+	void Update () {
+
+		array_comparar = array_original;
+
+		for (int i = 0; i < array_original.Length - 1; i++) 
+		{
+			if (array_comparar[i + 1] == array_comparar[i]) 
+			{
+				int[] results = new int[array_comparar.Length];
+				results[i] = array_comparar[i];
+
+				print (results[i]);
+			}
+		}
+	}
